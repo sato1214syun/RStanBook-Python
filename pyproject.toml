@@ -27,7 +27,7 @@ build-backend = "hatchling.build"
 [tool.rye]
 managed = true
 dev-dependencies = [
-    "ruff>=0.0.287",
+    "ruff>=0.0.288",
     "notebook>=7.0.2",
 ]
 
