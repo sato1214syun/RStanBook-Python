@@ -21,7 +21,7 @@ model {
 }
 
 generated quantities {
-  array[n] int m_pred;
+  array[N] int m_pred;
   for (n in 1:N)
     m_pred[n] = poisson_log_rng(lambda[n]);
 }

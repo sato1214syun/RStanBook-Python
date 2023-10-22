@@ -6,9 +6,9 @@ using namespace stan::math;
 stan::math::profile_map profiles__;
 static constexpr std::array<const char*, 19> locations_array__ =
   {" (found before start of program)",
-  " (in '/Users/sean/Documents/myscript/python-bayes/src/python_bayes/chap05/model/model5-6b.stan', line 9, column 2 to column 12)",
-  " (in '/Users/sean/Documents/myscript/python-bayes/src/python_bayes/chap05/model/model5-6b.stan', line 13, column 2 to column 17)",
-  " (in '/Users/sean/Documents/myscript/python-bayes/src/python_bayes/chap05/model/model5-6b.stan', line 24, column 2 to column 16)",
+  " (in '/Users/sean/Documents/myscript/python-bayes/src/python_bayes/chap05/model/model5-6b.stan', line 9, column 2 to column 18)",
+  " (in '/Users/sean/Documents/myscript/python-bayes/src/python_bayes/chap05/model/model5-6b.stan', line 13, column 2 to column 23)",
+  " (in '/Users/sean/Documents/myscript/python-bayes/src/python_bayes/chap05/model/model5-6b.stan', line 24, column 2 to column 22)",
   " (in '/Users/sean/Documents/myscript/python-bayes/src/python_bayes/chap05/model/model5-6b.stan', line 15, column 4 to column 49)",
   " (in '/Users/sean/Documents/myscript/python-bayes/src/python_bayes/chap05/model/model5-6b.stan', line 14, column 2 to line 15, column 49)",
   " (in '/Users/sean/Documents/myscript/python-bayes/src/python_bayes/chap05/model/model5-6b.stan', line 26, column 4 to column 43)",
@@ -16,14 +16,14 @@ static constexpr std::array<const char*, 19> locations_array__ =
   " (in '/Users/sean/Documents/myscript/python-bayes/src/python_bayes/chap05/model/model5-6b.stan', line 20, column 4 to column 34)",
   " (in '/Users/sean/Documents/myscript/python-bayes/src/python_bayes/chap05/model/model5-6b.stan', line 19, column 2 to line 20, column 34)",
   " (in '/Users/sean/Documents/myscript/python-bayes/src/python_bayes/chap05/model/model5-6b.stan', line 2, column 2 to column 8)",
-  " (in '/Users/sean/Documents/myscript/python-bayes/src/python_bayes/chap05/model/model5-6b.stan', line 3, column 26 to column 27)",
-  " (in '/Users/sean/Documents/myscript/python-bayes/src/python_bayes/chap05/model/model5-6b.stan', line 3, column 2 to column 29)",
-  " (in '/Users/sean/Documents/myscript/python-bayes/src/python_bayes/chap05/model/model5-6b.stan', line 4, column 31 to column 32)",
-  " (in '/Users/sean/Documents/myscript/python-bayes/src/python_bayes/chap05/model/model5-6b.stan', line 4, column 2 to column 34)",
-  " (in '/Users/sean/Documents/myscript/python-bayes/src/python_bayes/chap05/model/model5-6b.stan', line 5, column 17 to column 18)",
-  " (in '/Users/sean/Documents/myscript/python-bayes/src/python_bayes/chap05/model/model5-6b.stan', line 5, column 2 to column 20)",
-  " (in '/Users/sean/Documents/myscript/python-bayes/src/python_bayes/chap05/model/model5-6b.stan', line 13, column 14 to column 15)",
-  " (in '/Users/sean/Documents/myscript/python-bayes/src/python_bayes/chap05/model/model5-6b.stan', line 24, column 13 to column 14)"};
+  " (in '/Users/sean/Documents/myscript/python-bayes/src/python_bayes/chap05/model/model5-6b.stan', line 3, column 8 to column 9)",
+  " (in '/Users/sean/Documents/myscript/python-bayes/src/python_bayes/chap05/model/model5-6b.stan', line 3, column 2 to column 35)",
+  " (in '/Users/sean/Documents/myscript/python-bayes/src/python_bayes/chap05/model/model5-6b.stan', line 4, column 8 to column 9)",
+  " (in '/Users/sean/Documents/myscript/python-bayes/src/python_bayes/chap05/model/model5-6b.stan', line 4, column 2 to column 40)",
+  " (in '/Users/sean/Documents/myscript/python-bayes/src/python_bayes/chap05/model/model5-6b.stan', line 5, column 8 to column 9)",
+  " (in '/Users/sean/Documents/myscript/python-bayes/src/python_bayes/chap05/model/model5-6b.stan', line 5, column 2 to column 26)",
+  " (in '/Users/sean/Documents/myscript/python-bayes/src/python_bayes/chap05/model/model5-6b.stan', line 13, column 8 to column 9)",
+  " (in '/Users/sean/Documents/myscript/python-bayes/src/python_bayes/chap05/model/model5-6b.stan', line 24, column 8 to column 9)"};
 class model5_6b_model final : public model_base_crtp<model5_6b_model> {
  private:
   int N;
@@ -106,7 +106,7 @@ class model5_6b_model final : public model_base_crtp<model5_6b_model> {
   }
   inline std::vector<std::string> model_compile_info() const noexcept {
     return std::vector<std::string>{"stanc_version = stanc3 v2.32.2",
-             "stancflags = "};
+             "stancflags = --filename-in-msg=model5-6b.stan"};
   }
   template <bool propto__, bool jacobian__, typename VecR, typename VecI,
             stan::require_vector_like_t<VecR>* = nullptr,
