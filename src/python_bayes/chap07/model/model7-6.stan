@@ -1,13 +1,13 @@
 data {
   int N;
-  real X[N];
-  real Y[N];
+  array[N] real X;
+  array[N] real Y;
 }
 
 parameters {
   real a;
   real b;
-  real x_true[N];
+  array[N] real x_true;
   real<lower=0> s_Y;
 }
 

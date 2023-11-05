@@ -1,9 +1,9 @@
 data {
   int N;
-  real X[N];
-  real Y[N];
+  array[N] real X;
+  array[N] real Y;
   int N_new;
-  real X_new[N_new];
+  array[N_new] real X_new;
 }
 
 parameters {
@@ -18,7 +18,7 @@ model {
 }
 
 generated quantities {
-  real y_new[N_new];
+  array[N_new] real y_new;
   for (n in 1:N_new)
     y_new[n] = cauchy_rng(a + b*X_new[n], sigma);
 }
