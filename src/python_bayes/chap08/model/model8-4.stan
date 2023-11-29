@@ -1,16 +1,16 @@
 data {
   int N;
   int K;
-  real X[N];
-  real Y[N];
-  int<lower=1, upper=K> KID[N];
+  array[N] real X;
+  array[N] real Y;
+  array[N] int<lower=1, upper=K> KID;
 }
 
 parameters {
   real a0;
   real b0;
-  real a[K];
-  real b[K];
+  array[K] real a;
+  array[K] real b;
   real<lower=0> s_a;
   real<lower=0> s_b;
   real<lower=0> s_Y;

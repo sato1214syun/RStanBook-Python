@@ -1,25 +1,25 @@
 data {
   int N;
   int T;
-  real Time[T];
-  real Y[N,T];
+  array[T] real Time;
+  array[N, T] real Y;
   int T_new;
-  real Time_new[T_new];
+  array[T_new] real Time_new;
 }
 
 parameters {
   real a0;
   real b0;
-  real log_a[N];
-  real log_b[N];
+  array[N] real log_a;
+  array[N] real log_b;
   real<lower=0> s_a;
   real<lower=0> s_b;
   real<lower=0> s_Y;
 }
 
 transformed parameters {
-  real a[N];
-  real b[N];
+  array[N] real a;
+  array[N] real b;
   for (n in 1:N) {
     a[n] = exp(log_a[n]);
     b[n] = exp(log_b[n]);

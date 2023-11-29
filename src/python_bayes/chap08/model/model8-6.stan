@@ -2,25 +2,25 @@ data {
   int N;
   int G;
   int K;
-  real X[N];
-  real Y[N];
-  int<lower=1, upper=K> KID[N];
-  int<lower=1, upper=G> K2G[K];
-  int<lower=1, upper=G> GID[N];
+  array[N] real X;
+  array[N] real Y;
+  array[N] int<lower=1, upper=K> KID;
+  array[K] int<lower=1, upper=G> K2G;
+  array[N] int<lower=1, upper=G> GID;
 }
 
 parameters {
   real a0;
   real b0;
-  real a1[G];
-  real b1[G];
-  real a[K];
-  real b[K];
+  array[G] real a1;
+  array[G] real b1;
+  array[K] real a;
+  array[K] real b;
   real<lower=0> s_ag;
   real<lower=0> s_bg;
-  real<lower=0> s_a[G];
-  real<lower=0> s_b[G];
-  real<lower=0> s_Y[G];
+  array[G] real<lower=0> s_a;
+  array[G] real<lower=0> s_b;
+  array[G] real<lower=0> s_Y;
 }
 
 model {

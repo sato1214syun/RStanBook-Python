@@ -1,16 +1,16 @@
 data {
   int N;
-  int Y[N];
+  array[N] int Y;
 }
 
 parameters {
   real b;
-  real b_I[N];
+  array[N] real b_I;
   real<lower=0> s_I;
 }
 
 transformed parameters {
-  real q[N];
+  array[N] real q;
   for (n in 1:N)
     q[n] = inv_logit(b + b_I[n]);
 }

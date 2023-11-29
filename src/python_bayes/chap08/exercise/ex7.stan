@@ -1,15 +1,15 @@
 data {
   int N;
   int N_Pot;
-  int<lower=0, upper=1> F[N];
-  int<lower=1, upper=N_Pot> N2Pot[N];
-  int Y[N];
+  array[N] int<lower=0, upper=1> F;
+  array[N] int<lower=1, upper=N_Pot> N2Pot;
+  array[N] int Y;
 }
 
 parameters {
-  real b[2];
-  real b_I[N];
-  real b_Pot[N_Pot];
+  array[2] real b;
+  array[N] real b_I;
+  array[N_Pot] real b_Pot;
   real<lower=0> s_I;
   real<lower=0> s_Pot;
 }
