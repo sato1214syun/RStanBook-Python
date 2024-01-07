@@ -1,4 +1,4 @@
-kid	kname	nid
+ 進むkid	kname	nid
 64	加藤一二三	1
 77	内藤國雄	2
 93	桐山清澄	3

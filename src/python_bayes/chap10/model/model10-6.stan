@@ -3,11 +3,11 @@ data {
   int K;
   vector[N] X;
   vector[N] Y;
-  int<lower=1, upper=K> KID[N];
+  array[N] int<lower=1, upper=K> KID;
 }
 
 parameters {
-  vector[2] ab[K];
+  array[K] vector[2] ab;
   vector[2] ab0;
   real<lower=0> s_a;
   real<lower=0> s_b;

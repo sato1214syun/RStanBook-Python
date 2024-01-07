@@ -3,7 +3,7 @@ data {
   int K;
   vector[N] X;
   vector[N] Y;
-  int<lower=1, upper=K> KID[N];
+  array[N] int<lower=1, upper=K> KID;
 }
 
 parameters {

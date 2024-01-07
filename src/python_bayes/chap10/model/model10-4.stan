@@ -1,7 +1,7 @@
 data {
   int N;  // num of players
   int G;  // num of games
-  int<lower=1, upper=N> LW[G,2];  // loser and winner of each game
+  array[G, 2] int<lower=1, upper=N> LW;  // loser and winner of each game
 }
 
 parameters {
