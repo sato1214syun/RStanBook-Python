@@ -12,15 +12,15 @@ data {
   int<lower=1> N;
   int<lower=1> I;
   int<lower=1> K;
-  int<lower=1, upper=N> PersonID[E];
-  int<lower=1, upper=I> ItemID[E];
-  int<lower=1> Freq[E];
+  array[E] int<lower=1, upper=N> PersonID;
+  array[E] int<lower=1, upper=I> ItemID;
+  array[E] int<lower=1> Freq;
   vector<lower=0>[I] Alpha;
 }
 
 parameters {
-  simplex[K] theta[N];
-  simplex[I] phi[K];
+  array[N] simplex[K] theta;
+  array[K] simplex[I] phi;
 }
 
 model {

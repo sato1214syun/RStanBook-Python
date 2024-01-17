@@ -14,12 +14,12 @@ functions {
 data {
   int N;
   int D;
-  int<lower=0> Y[N];
+  array[N] int<lower=0> Y;
   matrix[N,D] X;
 }
 
 parameters {
-  vector[D] b[2];
+  array[2] vector[D] b;
 }
 
 transformed parameters {
