@@ -5,6 +5,7 @@
 #   pre: false
 #   features: []
 #   all-features: false
+#   with-sources: false
 
 -e file:.
 arviz==0.17.0
