@@ -3,7 +3,7 @@ data {
   int J;
   matrix[I,J] Y;
   int T;
-  int<lower=1, upper=T> TID[I,J];
+  array[I,J] int<lower=1, upper=T> TID;
 }
 
 parameters {

@@ -2,8 +2,8 @@ data {
   int N;
   vector[N] Y;
   int I;
-  int<lower=1, upper=N> From[I];
-  int<lower=1, upper=N> To[I];
+  array[I] int<lower=1, upper=N> From;
+  array[I] int<lower=1, upper=N> To;
 }
 
 parameters {

@@ -1,13 +1,13 @@
 data {
   int I;
   int J;
-  real Y[I,J];
+  array[I, J] real Y;
   int T;
-  int<lower=1, upper=T> TID[I,J];
+  array[I,J] int<lower=1, upper=T> TID;
 }
 
 parameters {
-  real r[I,J];
+  array[I,J] real r;
   real<lower=0> s_r;
   vector[T] beta;
   real<lower=0> s_beta;
